@@ -30,7 +30,11 @@ public class ContatoRepository {
             List<String> linhas = Files.readAllLines(arquivo);
 
             for (String linha : linhas) {
-            System.out.println(linha);
+                String[] linhaSplit = linha.split(";");
+                System.out.println("NOME: " + linhaSplit[1]);
+                System.out.println("EMAIL: " + linhaSplit[2]);
+                System.out.println("TELEFONE: " + linhaSplit[3]);
+                System.out.println("---------------------------------");
         }
 //           List<String> linhas = Files.readAllLines(arquivo);
 //           int contador = 0;
